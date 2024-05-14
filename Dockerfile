@@ -17,7 +17,8 @@ RUN tar -zxf apache-tomcat-9.0.88.tar.gz
 RUN mv -f apache-tomcat-9.0.88/* /opt/download/extract/tomcat
 
 # Copy the war file on tomcat directory
-COPY target/.jar* /opt/download/extract/tomcat/webapps
+COPY target/groot-4.0.4-SNAPSHOT.jar /opt/download/extract/tomcat/webapps
+COPY target/groot-4.0.4-SNAPSHOT-jar-with-dependencies.jar  /opt/download/extract/tomcat/webapps
 
 # port export
 EXPOSE 8080/tcp
